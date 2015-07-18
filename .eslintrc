@@ -1,0 +1,25 @@
+{
+  "extends": "eslint-config-cycle",
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "plugins": [
+    "react"
+  ],
+  "rules": {
+    "quotes": 0, # symbols in single quotes
+    "global-strict": 0, # "use strict" should be inserted automatically
+    "comma-dangle": [1, "always-multiline"], # add last commas to improve diffs
+
+    "react/jsx-boolean-value": 1,
+    "react/jsx-no-undef": 2,
+    "react/jsx-quotes": 1,
+    "react/jsx-uses-react": [2, {"pragma": "hJSX"}],
+    "react/jsx-uses-vars": 2,
+    "react/self-closing-comp": 1,
+    "react/wrap-multilines": 1,
+    "react/jsx-no-duplicate-props": 2,
+  }
+}
