@@ -8,8 +8,8 @@ function calculateBMI(weight: number, height: number) {
 
 function intent(DOM) {
   return {
-    changeWeight: DOM.get('#weight', 'newValue').map(ev => ev.detail),
-    changeHeight: DOM.get('#height', 'newValue').map(ev => ev.detail),
+    changeWeight: DOM.get('#weight', 'newValue').map((ev) => ev.detail),
+    changeHeight: DOM.get('#height', 'newValue').map((ev) => ev.detail),
   };
 }
 
