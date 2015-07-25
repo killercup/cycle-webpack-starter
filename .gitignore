@@ -10,6 +10,7 @@ npm-debug.log
 
 # Editor Stuff
 *.sublime-project
+*.sublime-workspace
 *.bak
 *~
 

@@ -1,9 +1,11 @@
-import merge from "webpack-merge";
+import merge from 'webpack-merge';
 
-import webpack from "webpack";
-import CompressionPlugin from "compression-webpack-plugin";
+import webpack from 'webpack';
+import CompressionPlugin from 'compression-webpack-plugin';
 
-export default merge(require('./webpack-common.config.js'), {
+import commonConfig from './webpack-common.config.js';
+
+export default merge(commonConfig, {
   debug: false,
   devtool: "source-map",
   profile: true,

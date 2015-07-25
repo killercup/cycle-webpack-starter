@@ -1,4 +1,7 @@
-import webpack from "webpack";
+import webpack from 'webpack';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+
+let name = 'Cycle!';
 
 let vendorModules = /(node_modules|bower_components)/;
 
@@ -11,7 +14,7 @@ export default {
 
   output: {
     path: "./build",
-    filename: "[name].js",
+    filename: "[name]-[chunkhash].js",
     pathinfo: true,
     publicPath: "",
   },
@@ -46,7 +49,12 @@ export default {
 
   plugins: [
     new webpack.optimize.CommonsChunkPlugin(
-      'vendor', 'vendor.js', Infinity
+      'vendor', 'vendor-[chunkhash].js', Infinity
     ),
+    new HtmlWebpackPlugin({
+      title: name,
+      minify: process.env.NODE_ENV === 'production',
+      template: './app/index.html',
+    }),
   ],
 };

@@ -22,6 +22,7 @@
     "eslint": "^1.0.0-rc-3",
     "eslint-plugin-babel": "git://github.com/babel/eslint-plugin-babel#55f43eae86ff36f4bafab2e2f10d3ae76c8f9340",
     "eslint-plugin-react": "^3.0.0",
+    "html-webpack-plugin": "^1.6.0",
     "node-libs-browser": "^0.5.2",
     "webpack": "^1.10.1",
     "webpack-dev-server": "^1.10.1",

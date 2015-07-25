@@ -33,6 +33,7 @@ To add dependencies to your _vendor_ bundle, just edit `src/vendor.js`.
 
 ## TODO
 
-- [ ] Create HTML files using the [HTML Webpack plugin](https://github.com/ampedandwired/html-webpack-plugin)
-- [ ] Use hashes in filenames
+- [x] Create HTML files using the [HTML Webpack plugin](https://github.com/ampedandwired/html-webpack-plugin)
+- [x] Use hashes in filenames
 - [ ] Add Webpack plugins for CSS and asset files
+- [ ] Try to integrate Polymer elements
