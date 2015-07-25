@@ -4,7 +4,7 @@ import {hJSX} from '@cycle/dom';
 export default function labeledSlider(responses) {
   const initialValue$ = responses.props.get('initial').first();
   const newValue$ = responses.DOM.get('.slider', 'input')
-    .map((ev) => +ev.target.value);
+    .map((ev) => parseInt(ev.target.value), 10);
 
   const value$ = initialValue$.concat(newValue$);
   const props$ = responses.props.get('*');
