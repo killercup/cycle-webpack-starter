@@ -3,7 +3,7 @@ import merge from "webpack-merge";
 export default merge(require('./webpack-common.config.js'), {
   debug: true,
   devtool: "cheap-module-inline-source-map",
-  profile: true,
+  profile: false,
 
   watch: true,
   watchOptions: {

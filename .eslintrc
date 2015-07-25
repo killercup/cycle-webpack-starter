@@ -5,8 +5,9 @@
     "node": true
   },
   "plugins": [
-    "cycle",
+    "babel",
     "react",
+    "no-class",
   ],
   "ecmaFeatures": {
     "arrowFunctions": true,
@@ -28,7 +29,8 @@
     "objectLiteralShorthandProperties": true,
     "generators": true,
     "forOf": true,
-    "blockBindings": true
+    "blockBindings": true,
+    "jsx": true
   },
   "rules": {
     "no-cond-assign": [2, "always"],
@@ -130,6 +132,14 @@
     "react/wrap-multilines": 1,
     "react/jsx-no-duplicate-props": 2,
 
-    "cycle/brace-style": 2,
+    "babel/block-scoped-var": 1,
+    "babel/object-shorthand": 1,
+    "babel/generator-star": 1,
+    "babel/generator-star-spacing": 1,
+    "babel/new-cap": 1,
+    "babel/object-curly-spacing": 1,
+    "babel/space-in-brackets": 1,
+
+    "no-class/no-class": 2,
   }
 }

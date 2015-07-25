@@ -52,7 +52,7 @@ function view(state) {
       <img src="http://i.imgur.com/6NfmQ.jpg" alt="Shit's on fire" />
     </section>
   ))
-  .doOnError(console.error.bind(console))
+  .doOnError(console.error.bind(console));
 }
 
 function main({DOM}) {

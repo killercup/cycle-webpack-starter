@@ -1,5 +1,7 @@
 import webpack from "webpack";
 
+let vendorModules = /(node_modules|bower_components)/;
+
 export default {
   target: "web",
   entry: {
@@ -15,10 +17,13 @@ export default {
   },
 
   module: {
+    preLoaders: [
+      {test: /\.jsx?$/, loader: "eslint-loader", exclude: vendorModules},
+    ],
     loaders: [
       {
         test: /\.jsx?$/,
-        exclude: /(node_modules|bower_components)/,
+        exclude: vendorModules,
         loader: "babel",
         query: {
           optional: [
@@ -40,7 +45,6 @@ export default {
   },
 
   plugins: [
-    new webpack.NoErrorsPlugin(),
     new webpack.optimize.CommonsChunkPlugin(
       'vendor', 'vendor.js', Infinity
     ),
