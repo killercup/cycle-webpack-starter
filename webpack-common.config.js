@@ -32,6 +32,7 @@ export default {
           optional: [
             "runtime",
             "validation.undeclaredVariableCheck",
+            "optimisation.react.constantElements"
           ],
           env: {
             development: {
@@ -53,7 +54,20 @@ export default {
     ),
     new HtmlWebpackPlugin({
       title: name,
-      minify: process.env.NODE_ENV === 'production',
+      minify: process.env.NODE_ENV === 'production' ? {
+        removeComments: true,
+        removeCommentsFromCDATA: true,
+        collapseWhitespace: true,
+        conservativeCollapse: false,
+        collapseBooleanAttributes: true,
+        removeAttributeQuotes: true,
+        removeRedundantAttributes: true,
+        preventAttributesEscaping: true,
+        useShortDoctype: true,
+        removeEmptyAttributes: true,
+        removeScriptTypeAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+      } : false,
       template: './app/index.html',
     }),
   ],
