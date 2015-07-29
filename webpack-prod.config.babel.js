@@ -2,6 +2,7 @@ import merge from 'webpack-merge';
 
 import webpack from 'webpack';
 import CompressionPlugin from 'compression-webpack-plugin';
+import CleanPlugin from 'clean-webpack-plugin';
 
 import commonConfig from './webpack-common.config.js';
 
@@ -12,6 +13,7 @@ export default merge(commonConfig, {
   watch: false,
 
   plugins: [
+    new CleanPlugin(["build"]),
     new webpack.NoErrorsPlugin(),
     new webpack.DefinePlugin({
       "process.env": {
@@ -30,7 +32,7 @@ export default merge(commonConfig, {
     new CompressionPlugin({
       asset: "{file}.gz",
       algorithm: "gzip",
-      regExp: new RegExp("\.(js|html|css)$"),
+      regExp: new RegExp("\.(js|html|css|svg)$"),
       threshold: 10240,
       minRatio: 0.8,
     }),
