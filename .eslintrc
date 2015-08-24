@@ -132,13 +132,11 @@
     "react/wrap-multilines": 1,
     "react/jsx-no-duplicate-props": 2,
 
-    "babel/block-scoped-var": 1,
-    "babel/object-shorthand": 1,
-    "babel/generator-star": 1,
     "babel/generator-star-spacing": 1,
     "babel/new-cap": 1,
     "babel/object-curly-spacing": 1,
-    "babel/space-in-brackets": 1,
+    "babel/object-shorthand": 1,
+    "babel/arrow-parens": 1,
 
     "no-class/no-class": 2,
   }
