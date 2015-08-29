@@ -19,9 +19,9 @@ export default merge(commonConfig, {
 
     hot: false,
     inline: true,
+    historyApiFallback: true,
 
     colors: true,
-    noInfo: true,
-    historyApiFallback: true,
+    stats: 'normal',
   },
 });
