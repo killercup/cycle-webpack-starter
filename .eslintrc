@@ -131,6 +131,8 @@
     "react/self-closing-comp": 1,
     "react/wrap-multilines": 1,
     "react/jsx-no-duplicate-props": 2,
+    "react/jsx-indent-props": [2, 2],
+    "react/jsx-closing-bracket-location": [1, {location: 'after-props'}],
 
     "babel/generator-star-spacing": 1,
     "babel/new-cap": 1,

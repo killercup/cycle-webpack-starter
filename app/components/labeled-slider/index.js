@@ -18,8 +18,7 @@ export default function labeledSlider(responses) {
         <input className="slider" type="range"
           min={props.min}
           max={props.max}
-          value={value}
-          />
+          value={value} />
       </div>
     );
 
