@@ -2,6 +2,8 @@
 
 Boilerplate for building ES6 web apps using [Cycle](http://cycle.js.org/).
 
+[![Build Status](https://travis-ci.org/killercup/cycle-webpack-starter.svg?branch=master)](https://travis-ci.org/killercup/cycle-webpack-starter)
+
 ## Getting Started
 
 1. `npm install`
