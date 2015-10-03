@@ -32,12 +32,13 @@ export default {
           optional: [
             "runtime",
             "validation.undeclaredVariableCheck",
-            "optimisation.react.constantElements"
+            "optimisation.react.constantElements",
           ],
           env: {
             development: {
               plugins: [
                 "typecheck",
+                "closure-elimination",
               ],
             },
           },
